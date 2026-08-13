@@ -137,7 +137,7 @@
         tampilkanWaktu();
 
 
-       async function absenMasuk() {
+      function absenMasuk() {
 
     let guru = document.getElementById("guru").value;
     let kelas = document.getElementById("kelas").value;
@@ -162,78 +162,53 @@
         year: "numeric"
     });
 
-    const data = {
-        tanggal: tanggal,
-        jam: jam,
-        guru: guru,
-        kelas: kelas,
-        mapel: mapel,
-        status: "Masuk"
-    };
+    document.getElementById("hasil").innerHTML = `
 
-    try {
+        <div class="success">
 
-        const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbxoUgzNMkLCFeJxtZPzIcAQBon0zo7Rg-ZWjE8q03-fux4zrEfyR5ACoVdshmewj9k/exec",
-            {
-                method: "POST",
-                mode: "no-cors",
-                headers: {
-                    "Content-Type": "text/plain"
-                },
-                body: JSON.stringify(data)
-            }
-        );
+            <div class="success-icon">✓</div>
 
-        document.getElementById("hasil").innerHTML = `
+            <div class="success-content">
 
-            <div class="success">
+                <h3>Absensi berhasil!</h3>
 
-                <div class="success-icon">✓</div>
+                <p>Data absensi telah dicatat.</p>
 
-                <div class="success-content">
+                <div class="detail">
 
-                    <h3>Absensi berhasil dikirim!</h3>
+                    <div>
+                        <small>Nama Guru</small>
+                        <strong>${guru}</strong>
+                    </div>
 
-                    <p>Data kehadiran sudah dikirim ke sistem.</p>
+                    <div>
+                        <small>Kelas</small>
+                        <strong>${kelas}</strong>
+                    </div>
 
-                    <div class="detail">
+                    <div>
+                        <small>Mata Pelajaran</small>
+                        <strong>${mapel}</strong>
+                    </div>
 
-                        <div>
-                            <small>Nama Guru</small>
-                            <strong>${guru}</strong>
-                        </div>
+                    <div>
+                        <small>Jam Masuk</small>
+                        <strong>${jam}</strong>
+                    </div>
 
-                        <div>
-                            <small>Kelas</small>
-                            <strong>${kelas}</strong>
-                        </div>
-
-                        <div>
-                            <small>Mata Pelajaran</small>
-                            <strong>${mapel}</strong>
-                        </div>
-
-                        <div>
-                            <small>Jam Masuk</small>
-                            <strong>${jam}</strong>
-                        </div>
-
-                        <div>
-                            <small>Tanggal</small>
-                            <strong>${tanggal}</strong>
-                        </div>
-
+                    <div>
+                        <small>Tanggal</small>
+                        <strong>${tanggal}</strong>
                     </div>
 
                 </div>
 
             </div>
 
-        `;
+        </div>
 
-    } catch (error) {
-
+    `;
+}
         alert("Gagal mengirim absensi. Silakan coba lagi.");
 
         console.error(error);
