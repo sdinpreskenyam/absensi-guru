@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Absensi Guru</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,91 +14,188 @@
 
     <div class="container">
 
+        <!-- HEADER -->
         <header>
+
             <div class="header-title">
                 <span class="icon">✓</span>
+
                 <h1>ABSENSI GURU</h1>
             </div>
 
             <div class="tanggal" id="tanggal">
                 Memuat tanggal...
             </div>
+
         </header>
 
+
+        <!-- ISI -->
         <main>
 
+            <!-- WELCOME -->
             <section class="welcome">
-                <div class="welcome-icon">👩‍🏫</div>
+
+                <div class="welcome-icon">
+                    👩‍🏫
+                </div>
 
                 <div>
+
                     <h2>Selamat Datang!</h2>
+
                     <p>
                         Silakan isi data di bawah ini untuk
                         mencatat kehadiran mengajar.
                     </p>
+
                 </div>
 
                 <div class="jam">
+
                     <small>Waktu Sekarang</small>
-                    <strong id="jam">00:00:00</strong>
+
+                    <strong id="jam">
+                        00:00:00
+                    </strong>
+
                 </div>
+
             </section>
 
 
+            <!-- FORM -->
             <section class="form-card">
 
                 <h2>👤 Form Absensi</h2>
 
+
                 <div class="form-grid">
 
+                    <!-- GURU -->
                     <div class="form-group">
-                        <label for="guru">Nama Guru</label>
+
+                        <label for="guru">
+                            Nama Guru
+                        </label>
 
                         <select id="guru">
-                            <option value="">-- Pilih Guru --</option>
-                            <option>Nama Guru 1</option>
-                            <option>Nama Guru 2</option>
-                            <option>Nama Guru 3</option>
+
+                            <option value="">
+                                -- Pilih Guru --
+                            </option>
+
+                            <option>
+                                Nama Guru 1
+                            </option>
+
+                            <option>
+                                Nama Guru 2
+                            </option>
+
+                            <option>
+                                Nama Guru 3
+                            </option>
+
                         </select>
+
                     </div>
 
 
+                    <!-- KELAS -->
                     <div class="form-group">
-                        <label for="kelas">Kelas</label>
+
+                        <label for="kelas">
+                            Kelas
+                        </label>
 
                         <select id="kelas">
-                            <option value="">-- Pilih Kelas --</option>
-                            <option>Kelas I</option>
-                            <option>Kelas II</option>
-                            <option>Kelas III</option>
-                            <option>Kelas IV</option>
-                            <option>Kelas V</option>
-                            <option>Kelas VI</option>
+
+                            <option value="">
+                                -- Pilih Kelas --
+                            </option>
+
+                            <option>
+                                Kelas I
+                            </option>
+
+                            <option>
+                                Kelas II
+                            </option>
+
+                            <option>
+                                Kelas III
+                            </option>
+
+                            <option>
+                                Kelas IV
+                            </option>
+
+                            <option>
+                                Kelas V
+                            </option>
+
+                            <option>
+                                Kelas VI
+                            </option>
+
                         </select>
+
                     </div>
 
 
+                    <!-- MAPEL -->
                     <div class="form-group">
-                        <label for="mapel">Mata Pelajaran</label>
+
+                        <label for="mapel">
+                            Mata Pelajaran
+                        </label>
 
                         <select id="mapel">
-                            <option value="">-- Pilih Mata Pelajaran --</option>
-                            <option>Bahasa Inggris</option>
-                            <option>Matematika</option>
-                            <option>Bahasa Indonesia</option>
-                            <option>IPA</option>
-                            <option>IPS</option>
+
+                            <option value="">
+                                -- Pilih Mata Pelajaran --
+                            </option>
+
+                            <option>
+                                Bahasa Inggris
+                            </option>
+
+                            <option>
+                                Matematika
+                            </option>
+
+                            <option>
+                                Bahasa Indonesia
+                            </option>
+
+                            <option>
+                                IPA
+                            </option>
+
+                            <option>
+                                IPS
+                            </option>
+
                         </select>
+
                     </div>
 
                 </div>
 
 
-                <button onclick="absenMasuk()">
+                <!-- TOMBOL -->
+                <button
+                    type="button"
+                    onclick="absenMasuk()"
+                    id="tombolAbsen">
+
                     ✓ &nbsp; ABSEN MASUK
+
                 </button>
 
 
+                <!-- HASIL -->
                 <div id="hasil"></div>
 
             </section>
@@ -103,114 +203,328 @@
         </main>
 
 
+        <!-- FOOTER -->
         <footer>
+
             Sistem Absensi Guru<br>
+
             © 2026 SD Inpres Kenyam
+
         </footer>
 
     </div>
 
 
+
+    <!-- JAVASCRIPT -->
     <script>
+
+        /*
+         * URL GOOGLE APPS SCRIPT
+         */
+
+        const SCRIPT_URL =
+            "https://script.google.com/macros/s/AKfycbxoUgzNMkLCFeJxtZPzIcAQBon0zo7Rg-ZWjE8q03-fux4zrEfyR5ACoVdshmewj9k/exec";
+
+
+        /*
+         * MENAMPILKAN JAM DAN TANGGAL
+         */
 
         function tampilkanWaktu() {
 
-            let sekarang = new Date();
+            const sekarang = new Date();
 
-            let jam = sekarang.toLocaleTimeString("id-ID");
 
-            document.getElementById("jam").textContent = jam;
+            const jam = sekarang.toLocaleTimeString(
+                "id-ID",
+                {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit"
+                }
+            );
 
-            let tanggal = sekarang.toLocaleDateString("id-ID", {
-                weekday: "long",
-                day: "numeric",
-                month: "long",
-                year: "numeric"
-            });
 
-            document.getElementById("tanggal").textContent = tanggal;
+            const tanggal = sekarang.toLocaleDateString(
+                "id-ID",
+                {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                }
+            );
+
+
+            document.getElementById("jam").textContent =
+                jam;
+
+
+            document.getElementById("tanggal").textContent =
+                tanggal;
+
         }
 
 
-        setInterval(tampilkanWaktu, 1000);
+        setInterval(
+            tampilkanWaktu,
+            1000
+        );
+
 
         tampilkanWaktu();
 
 
-      function absenMasuk() {
 
-    let guru = document.getElementById("guru").value;
-    let kelas = document.getElementById("kelas").value;
-    let mapel = document.getElementById("mapel").value;
+        /*
+         * FUNGSI ABSEN
+         */
 
-    if (guru === "" || kelas === "" || mapel === "") {
-        alert("Silakan lengkapi semua data terlebih dahulu!");
-        return;
-    }
+        function absenMasuk() {
 
-    let sekarang = new Date();
+            const guru =
+                document.getElementById("guru").value;
 
-    let jam = sekarang.toLocaleTimeString("id-ID", {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit"
-    });
 
-    let tanggal = sekarang.toLocaleDateString("id-ID", {
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-    });
+            const kelas =
+                document.getElementById("kelas").value;
 
-    document.getElementById("hasil").innerHTML = `
 
-        <div class="success">
+            const mapel =
+                document.getElementById("mapel").value;
 
-            <div class="success-icon">✓</div>
 
-            <div class="success-content">
+            /*
+             * CEK FORM
+             */
 
-                <h3>Absensi berhasil!</h3>
+            if (
+                guru === "" ||
+                kelas === "" ||
+                mapel === ""
+            ) {
 
-                <p>Data absensi telah dicatat.</p>
+                alert(
+                    "Silakan lengkapi semua data terlebih dahulu!"
+                );
 
-                <div class="detail">
+                return;
 
-                    <div>
-                        <small>Nama Guru</small>
-                        <strong>${guru}</strong>
+            }
+
+
+            /*
+             * WAKTU
+             */
+
+            const sekarang = new Date();
+
+
+            const jam =
+                sekarang.toLocaleTimeString(
+                    "id-ID",
+                    {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        second: "2-digit"
+                    }
+                );
+
+
+            const tanggal =
+                sekarang.toLocaleDateString(
+                    "id-ID",
+                    {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric"
+                    }
+                );
+
+
+            /*
+             * DATA YANG AKAN DIKIRIM
+             */
+
+            const data = {
+
+                tanggal: tanggal,
+
+                jam: jam,
+
+                guru: guru,
+
+                kelas: kelas,
+
+                mapel: mapel,
+
+                status: "Masuk"
+
+            };
+
+
+            /*
+             * UBAH TOMBOL
+             */
+
+            const tombol =
+                document.getElementById(
+                    "tombolAbsen"
+                );
+
+
+            tombol.disabled = true;
+
+            tombol.textContent =
+                "Mengirim data...";
+
+
+            /*
+             * KIRIM KE GOOGLE SHEETS
+             */
+
+            fetch(
+                SCRIPT_URL,
+                {
+                    method: "POST",
+
+                    mode: "no-cors",
+
+                    headers: {
+                        "Content-Type":
+                            "text/plain;charset=utf-8"
+                    },
+
+                    body:
+                        JSON.stringify(data)
+
+                }
+            )
+            .then(function () {
+
+                /*
+                 * TAMPILKAN HASIL
+                 */
+
+                document.getElementById(
+                    "hasil"
+                ).innerHTML = `
+
+                    <div class="success">
+
+                        <div class="success-icon">
+                            ✓
+                        </div>
+
+                        <div class="success-content">
+
+                            <h3>
+                                Absensi berhasil!
+                            </h3>
+
+                            <p>
+                                Data kehadiran telah dikirim.
+                            </p>
+
+                            <div class="detail">
+
+                                <div>
+                                    <small>
+                                        Nama Guru
+                                    </small>
+
+                                    <strong>
+                                        ${guru}
+                                    </strong>
+                                </div>
+
+
+                                <div>
+                                    <small>
+                                        Kelas
+                                    </small>
+
+                                    <strong>
+                                        ${kelas}
+                                    </strong>
+                                </div>
+
+
+                                <div>
+                                    <small>
+                                        Mata Pelajaran
+                                    </small>
+
+                                    <strong>
+                                        ${mapel}
+                                    </strong>
+                                </div>
+
+
+                                <div>
+                                    <small>
+                                        Jam Masuk
+                                    </small>
+
+                                    <strong>
+                                        ${jam}
+                                    </strong>
+                                </div>
+
+
+                                <div>
+                                    <small>
+                                        Tanggal
+                                    </small>
+
+                                    <strong>
+                                        ${tanggal}
+                                    </strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div>
-                        <small>Kelas</small>
-                        <strong>${kelas}</strong>
-                    </div>
+                `;
 
-                    <div>
-                        <small>Mata Pelajaran</small>
-                        <strong>${mapel}</strong>
-                    </div>
 
-                    <div>
-                        <small>Jam Masuk</small>
-                        <strong>${jam}</strong>
-                    </div>
+                /*
+                 * KEMBALIKAN TOMBOL
+                 */
 
-                    <div>
-                        <small>Tanggal</small>
-                        <strong>${tanggal}</strong>
-                    </div>
+                tombol.disabled = false;
 
-                </div>
+                tombol.innerHTML =
+                    "✓ &nbsp; ABSEN MASUK";
 
-            </div>
+            })
 
-        </div>
 
-    `;
-}
-        alert("Gagal mengirim absensi. Silakan coba lagi.");
+            .catch(function (error) {
 
-        console.error(error);
-    }
-}
+                console.error(error);
+
+
+                alert(
+                    "Terjadi kesalahan saat mengirim data."
+                );
+
+
+                tombol.disabled = false;
+
+                tombol.innerHTML =
+                    "✓ &nbsp; ABSEN MASUK";
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
