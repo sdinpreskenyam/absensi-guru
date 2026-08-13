@@ -3,18 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Absensi Sekolah</title>
+
+    <title>Absensi Guru</title>
 </head>
+
 <body>
 
-    <h1>Absensi Siswa</h1>
-    <p>Selamat datang di sistem absensi sekolah</p>
+    <h1>ABSENSI GURU</h1>
 
-    <input type="text" placeholder="Masukkan nama siswa">
+    <p>Silakan isi data untuk mencatat kehadiran mengajar.</p>
+
+    <label>Nama Guru</label>
+    <br>
+    <select id="guru">
+        <option value="">-- Pilih Guru --</option>
+        <option>Nama Guru 1</option>
+        <option>Nama Guru 2</option>
+        <option>Nama Guru 3</option>
+    </select>
 
     <br><br>
 
-    <button>Absen</button>
+    <label>Kelas</label>
+    <br>
+    <select id="kelas">
+        <option value="">-- Pilih Kelas --</option>
+        <option>Kelas I</option>
+        <option>Kelas II</option>
+        <option>Kelas III</option>
+        <option>Kelas IV</option>
+        <option>Kelas V</option>
+        <option>Kelas VI</option>
+    </select>
+
+    <br><br>
+
+    <label>Mata Pelajaran</label>
+    <br>
+    <select id="mapel">
+        <option value="">-- Pilih Mata Pelajaran --</option>
+        <option>Bahasa Inggris</option>
+        <option>Matematika</option>
+        <option>Bahasa Indonesia</option>
+        <option>IPA</option>
+        <option>IPS</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="absenMasuk()">ABSEN MASUK</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        function absenMasuk() {
+
+            let guru = document.getElementById("guru").value;
+            let kelas = document.getElementById("kelas").value;
+            let mapel = document.getElementById("mapel").value;
+
+            if (guru === "" || kelas === "" || mapel === "") {
+                alert("Silakan lengkapi semua data!");
+                return;
+            }
+
+            let sekarang = new Date();
+
+            let jam = sekarang.toLocaleTimeString("id-ID", {
+                hour: "2-digit",
+                minute: "2-digit"
+            });
+
+            document.getElementById("hasil").innerHTML =
+                "✅ Absensi berhasil!<br><br>" +
+                "Guru: " + guru + "<br>" +
+                "Kelas: " + kelas + "<br>" +
+                "Mata Pelajaran: " + mapel + "<br>" +
+                "Jam Masuk: " + jam;
+        }
+    </script>
 
 </body>
 </html>
