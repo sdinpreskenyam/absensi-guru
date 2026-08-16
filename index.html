@@ -2,302 +2,989 @@
 <html lang="id">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Absensi Guru</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="style.css">
+
 </head>
+
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- HEADER -->
-        <header>
 
-            <div class="header-title">
-                <span class="icon">✓</span>
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-                <h1>ABSENSI GURU</h1>
+    <header>
+
+        <div class="header-title">
+
+            <span class="icon">✓</span>
+
+            <h1>ABSENSI GURU</h1>
+
+        </div>
+
+        <div
+            class="tanggal"
+            id="tanggal">
+
+            Memuat tanggal...
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome">
+
+            <div class="welcome-icon">
+
+                👩‍🏫
+
             </div>
 
-            <div class="tanggal" id="tanggal">
-                Memuat tanggal...
+
+            <div>
+
+                <h2>
+                    Selamat Datang!
+                </h2>
+
+                <p>
+                    Silakan isi data kegiatan
+                    untuk mencatat kehadiran.
+                </p>
+
             </div>
 
-        </header>
+
+            <div class="jam">
+
+                <small>
+                    Waktu Sekarang
+                </small>
+
+                <strong id="jam">
+                    00:00:00
+                </strong>
+
+            </div>
+
+        </section>
 
 
-        <!-- ISI -->
-        <main>
 
-            <!-- WELCOME -->
-            <section class="welcome">
+        <!-- =========================
+             FORM ABSENSI
+        ========================== -->
 
-                <div class="welcome-icon">
-                    👩‍🏫
+        <section class="form-card">
+
+
+            <h2>
+                👤 Form Absensi
+            </h2>
+
+
+
+            <!-- JENIS KEGIATAN -->
+
+            <div class="form-group">
+
+                <label for="jenisKegiatan">
+
+                    Jenis Kegiatan
+
+                </label>
+
+
+                <select
+                    id="jenisKegiatan"
+                    onchange="ubahJenisKegiatan()">
+
+                    <option value="mengajar">
+
+                        Mengajar
+
+                    </option>
+
+
+                    <option value="bersama">
+
+                        Kegiatan Bersama
+
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =====================
+                 FORM MENGAJAR
+            ====================== -->
+
+            <div id="formMengajar">
+
+
+                <!-- NAMA GURU -->
+
+                <div class="form-group">
+
+                    <label for="guru">
+
+                        Nama Guru
+
+                    </label>
+
+
+                    <select id="guru">
+
+                        <option value="">
+
+                            -- Pilih Guru --
+
+                        </option>
+
+
+                        <option>
+                            ABDUL KADIR
+                        </option>
+
+                        <option>
+                            ARISUGIANTO LAMBA, S.Pd
+                        </option>
+
+                        <option>
+                            DANIEL BAYE, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            DEWI
+                        </option>
+
+                        <option>
+                            DIAN
+                        </option>
+
+                        <option>
+                            ELI SEPTIANI, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            ESTER MARURU, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            HANA YULIANA TAFURAN, S.PdK
+                        </option>
+
+                        <option>
+                            HENDRA ASSORAN, S.Pd
+                        </option>
+
+                        <option>
+                            HERMIN DANDA, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            HERMIN YAKUB, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            ISAK MURIB, S.Pd
+                        </option>
+
+                        <option>
+                            LEDY MOBONGGI, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            MAMA TOS
+                        </option>
+
+                        <option>
+                            MARIANA PADAUNAN, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            MARIU SILMA, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            MEDIAN TANDI LEMBANG, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            MURIB
+                        </option>
+
+                        <option>
+                            NIHA MALISA
+                        </option>
+
+                        <option>
+                            ORY MANGIRI, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            PENAS WENDA, S.PdK
+                        </option>
+
+                        <option>
+                            PETRUS ROLAND WABISER, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            PILIPA PAGILING, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            PITMA GANGKA, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            RIKA DARMAWATI, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            SANTIANI TANDI LEMBANG, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            SARTIA DADI, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            SIMON, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            SOFIA
+                        </option>
+
+                        <option>
+                            SONTIANA VERONIKA BR PASARIBU, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            TETI PAGEWANG, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            VIA
+                        </option>
+
+                        <option>
+                            YAKOMINA WENDA, S.PdK
+                        </option>
+
+                        <option>
+                            YASON WASSAR, S.PdK
+                        </option>
+
+                        <option>
+                            YOHANIS KARAPA, S.Pd.Gr
+                        </option>
+
+                        <option>
+                            YUSTINA PASORONG, S.Pd.Gr
+                        </option>
+
+                    </select>
+
                 </div>
 
-                <div>
 
-                    <h2>Selamat Datang!</h2>
 
-                    <p>
-                        Silakan isi data di bawah ini untuk
-                        mencatat kehadiran mengajar.
-                    </p>
+                <!-- JENIS KELAS -->
+
+                <div class="form-group">
+
+                    <label for="jenisKelas">
+
+                        Jenis Kelas
+
+                    </label>
+
+
+                    <select
+                        id="jenisKelas"
+                        onchange="ubahJenisKelas()">
+
+                        <option value="tunggal">
+
+                            Kelas Tunggal
+
+                        </option>
+
+
+                        <option value="gabungan">
+
+                            Kelas Gabungan
+
+                        </option>
+
+                    </select>
 
                 </div>
 
-                <div class="jam">
 
-                    <small>Waktu Sekarang</small>
 
-                    <strong id="jam">
-                        00:00:00
-                    </strong>
+                <!-- KELAS TUNGGAL -->
+
+                <div
+                    class="form-group"
+                    id="kelasTunggal">
+
+                    <label for="kelas">
+
+                        Kelas
+
+                    </label>
+
+
+                    <select id="kelas">
+
+                        <option value="">
+
+                            -- Pilih Kelas --
+
+                        </option>
+
+                        <option>1A</option>
+                        <option>1B</option>
+                        <option>1C</option>
+                        <option>1D</option>
+
+                        <option>2A</option>
+                        <option>2B</option>
+                        <option>2C</option>
+                        <option>2D</option>
+
+                        <option>3A</option>
+                        <option>3B</option>
+                        <option>3C</option>
+                        <option>3D</option>
+
+                        <option>4A</option>
+                        <option>4B</option>
+                        <option>4C</option>
+
+                        <option>5A</option>
+                        <option>5B</option>
+                        <option>5C</option>
+
+                        <option>6A</option>
+                        <option>6B</option>
+                        <option>6C</option>
+
+                    </select>
 
                 </div>
 
-            </section>
 
 
-            <!-- FORM -->
-            <section class="form-card">
+                <!-- KELAS GABUNGAN -->
 
-                <h2>👤 Form Absensi</h2>
+                <div
+                    class="form-group"
+                    id="kelasGabungan"
+                    style="display:none;">
+
+                    <label>
+
+                        Pilih Kelas Gabungan
+
+                    </label>
 
 
-                <div class="form-grid">
+                    <div class="kelas-list">
 
-                    <!-- GURU -->
-                    <div class="form-group">
 
-                        <label for="guru">
-                            Nama Guru
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="1A">
+                            1A
                         </label>
 
-                        <select id="guru">
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="1B">
+                            1B
+                        </label>
 
-                            <option value="">
-                                -- Pilih Guru --
-                            </option>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="1C">
+                            1C
+                        </label>
 
-                            <option>
-                                Nama Guru 1
-                            </option>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="1D">
+                            1D
+                        </label>
 
-                            <option>
-                                Nama Guru 2
-                            </option>
 
-                            <option>
-                                Nama Guru 3
-                            </option>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="2A">
+                            2A
+                        </label>
 
-                        </select>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="2B">
+                            2B
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="2C">
+                            2C
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="2D">
+                            2D
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="3A">
+                            3A
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="3B">
+                            3B
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="3C">
+                            3C
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="3D">
+                            3D
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="4A">
+                            4A
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="4B">
+                            4B
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="4C">
+                            4C
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="5A">
+                            5A
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="5B">
+                            5B
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="5C">
+                            5C
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="6A">
+                            6A
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="6B">
+                            6B
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="6C">
+                            6C
+                        </label>
+
 
                     </div>
 
-
-                    <!-- KELAS -->
-                    <div class="form-group">
-
-                        <label for="kelas">
-                            Kelas
-                        </label>
-
-                        <select id="kelas">
-
-                            <option value="">
-                                -- Pilih Kelas --
-                            </option>
-
-                            <option>
-                                Kelas I
-                            </option>
-
-                            <option>
-                                Kelas II
-                            </option>
-
-                            <option>
-                                Kelas III
-                            </option>
-
-                            <option>
-                                Kelas IV
-                            </option>
-
-                            <option>
-                                Kelas V
-                            </option>
-
-                            <option>
-                                Kelas VI
-                            </option>
-
-                        </select>
-
-                    </div>
+                </div>
 
 
-                    <!-- MAPEL -->
-                    <div class="form-group">
 
-                        <label for="mapel">
-                            Mata Pelajaran
-                        </label>
+                <!-- MATA PELAJARAN -->
 
-                        <select id="mapel">
+                <div class="form-group">
 
-                            <option value="">
-                                -- Pilih Mata Pelajaran --
-                            </option>
+                    <label for="mapel">
 
-                            <option>
-                                Bahasa Inggris
-                            </option>
+                        Mata Pelajaran
 
-                            <option>
-                                Matematika
-                            </option>
+                    </label>
 
-                            <option>
-                                Bahasa Indonesia
-                            </option>
 
-                            <option>
-                                IPA
-                            </option>
+                    <select id="mapel">
 
-                            <option>
-                                IPS
-                            </option>
+                        <option value="">
 
-                        </select>
+                            -- Pilih Mata Pelajaran --
 
-                    </div>
+                        </option>
+
+                        <option>
+                            AGAMA ISLAM
+                        </option>
+
+                        <option>
+                            AGAMA KRISTEN
+                        </option>
+
+                        <option>
+                            BAHASA INDONESIA
+                        </option>
+
+                        <option>
+                            BAHASA INGGRIS
+                        </option>
+
+                        <option>
+                            IPAS
+                        </option>
+
+                        <option>
+                            MATEMATIKA
+                        </option>
+
+                        <option>
+                            P5
+                        </option>
+
+                        <option>
+                            PENDIDIKAN PANCASILA
+                        </option>
+
+                        <option>
+                            PJOK
+                        </option>
+
+                        <option>
+                            SENI
+                        </option>
+
+                    </select>
 
                 </div>
 
 
-                <!-- TOMBOL -->
-                <button
-                    type="button"
-                    onclick="absenMasuk()"
-                    id="tombolAbsen">
-
-                    ✓ &nbsp; ABSEN MASUK
-
-                </button>
-
-
-                <!-- HASIL -->
-                <div id="hasil"></div>
-
-            </section>
-
-        </main>
-
-
-        <!-- FOOTER -->
-        <footer>
-
-            Sistem Absensi Guru<br>
-
-            © 2026 SD Inpres Kenyam
-
-        </footer>
-
-    </div>
+            </div>
 
 
 
-    <!-- JAVASCRIPT -->
-    <script>
+            <!-- =====================
+                 FORM KEGIATAN BERSAMA
+            ====================== -->
 
-        /*
-         * URL GOOGLE APPS SCRIPT
-         */
-
-        const SCRIPT_URL =
-            "https://script.google.com/macros/s/AKfycbxoUgzNMkLCFeJxtZPzIcAQBon0zo7Rg-ZWjE8q03-fux4zrEfyR5ACoVdshmewj9k/exec";
+            <div
+                id="formBersama"
+                style="display:none;">
 
 
-        /*
-         * MENAMPILKAN JAM DAN TANGGAL
-         */
+                <div class="form-group">
 
-        function tampilkanWaktu() {
+                    <label for="kegiatan">
 
-            const sekarang = new Date();
+                        Kegiatan Bersama
 
-
-            const jam = sekarang.toLocaleTimeString(
-                "id-ID",
-                {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    second: "2-digit"
-                }
-            );
+                    </label>
 
 
-            const tanggal = sekarang.toLocaleDateString(
-                "id-ID",
-                {
-                    weekday: "long",
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric"
-                }
-            );
+                    <select id="kegiatan">
+
+                        <option value="">
+
+                            -- Pilih Kegiatan --
+
+                        </option>
+
+                        <option>
+                            Senam Bersama
+                        </option>
+
+                    </select>
+
+                </div>
 
 
-            document.getElementById("jam").textContent =
-                jam;
+                <div class="info-box">
+
+                    ℹ️ Kegiatan bersama tidak
+                    memerlukan nama guru.
+
+                    <br><br>
+
+                    Contoh: Senam Bersama
+                    seluruh warga sekolah.
+
+                </div>
 
 
-            document.getElementById("tanggal").textContent =
-                tanggal;
-
-        }
+            </div>
 
 
-        setInterval(
-            tampilkanWaktu,
-            1000
+
+            <!-- =====================
+                 TOMBOL ABSEN
+            ====================== -->
+
+            <button
+                type="button"
+                id="tombolAbsen"
+                onclick="absenMasuk()">
+
+                ✓ &nbsp; ABSEN MASUK
+
+            </button>
+
+
+
+            <!-- HASIL -->
+
+            <div id="hasil"></div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Sistem Absensi Guru
+        <br>
+
+        © 2026 SD Inpres Kenyam
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+
+/* URL APPS SCRIPT */
+
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbxoUgzNMkLCFeJxtZPzIcAQBon0zo7Rg-ZWjE8q03-fux4zrEfyR5ACoVdshmewj9k/exec";
+
+
+
+/* =========================
+   JAM DAN TANGGAL
+========================= */
+
+function tampilkanWaktu() {
+
+    const sekarang = new Date();
+
+
+    const jam =
+        sekarang.toLocaleTimeString(
+            "id-ID",
+            {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            }
         );
 
 
-        tampilkanWaktu();
+    const tanggal =
+        sekarang.toLocaleDateString(
+            "id-ID",
+            {
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            }
+        );
+
+
+    document.getElementById("jam")
+        .textContent = jam;
+
+
+    document.getElementById("tanggal")
+        .textContent = tanggal;
+
+}
+
+
+setInterval(
+    tampilkanWaktu,
+    1000
+);
+
+tampilkanWaktu();
 
 
 
-        /*
-         * FUNGSI ABSEN
-         */
+/* =========================
+   JENIS KEGIATAN
+========================= */
 
-        function absenMasuk() {
+function ubahJenisKegiatan() {
 
-            const guru =
-                document.getElementById("guru").value;
-
-
-            const kelas =
-                document.getElementById("kelas").value;
+    const jenis =
+        document.getElementById(
+            "jenisKegiatan"
+        ).value;
 
 
-            const mapel =
-                document.getElementById("mapel").value;
+    const formMengajar =
+        document.getElementById(
+            "formMengajar"
+        );
 
 
-            /*
-             * CEK FORM
-             */
+    const formBersama =
+        document.getElementById(
+            "formBersama"
+        );
+
+
+    if (jenis === "mengajar") {
+
+        formMengajar.style.display =
+            "block";
+
+        formBersama.style.display =
+            "none";
+
+    }
+
+    else {
+
+        formMengajar.style.display =
+            "none";
+
+        formBersama.style.display =
+            "block";
+
+    }
+
+}
+
+
+
+/* =========================
+   JENIS KELAS
+========================= */
+
+function ubahJenisKelas() {
+
+    const jenis =
+        document.getElementById(
+            "jenisKelas"
+        ).value;
+
+
+    const tunggal =
+        document.getElementById(
+            "kelasTunggal"
+        );
+
+
+    const gabungan =
+        document.getElementById(
+            "kelasGabungan"
+        );
+
+
+    if (jenis === "tunggal") {
+
+        tunggal.style.display =
+            "block";
+
+        gabungan.style.display =
+            "none";
+
+    }
+
+    else {
+
+        tunggal.style.display =
+            "none";
+
+        gabungan.style.display =
+            "block";
+
+    }
+
+}
+
+
+
+/* =========================
+   ABSEN MASUK
+========================= */
+
+function absenMasuk() {
+
+
+    const jenisKegiatan =
+        document.getElementById(
+            "jenisKegiatan"
+        ).value;
+
+
+    const sekarang =
+        new Date();
+
+
+    const jam =
+        sekarang.toLocaleTimeString(
+            "id-ID",
+            {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            }
+        );
+
+
+    const tanggal =
+        sekarang.toLocaleDateString(
+            "id-ID",
+            {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            }
+        );
+
+
+
+    /* =====================
+       KEGIATAN MENGAJAR
+    ====================== */
+
+    if (jenisKegiatan === "mengajar") {
+
+
+        const guru =
+            document.getElementById(
+                "guru"
+            ).value;
+
+
+        const jenisKelas =
+            document.getElementById(
+                "jenisKelas"
+            ).value;
+
+
+        const mapel =
+            document.getElementById(
+                "mapel"
+            ).value;
+
+
+        let kelas = "";
+
+
+
+        /* KELAS TUNGGAL */
+
+        if (jenisKelas === "tunggal") {
+
+            kelas =
+                document.getElementById(
+                    "kelas"
+                ).value;
+
 
             if (
                 guru === "" ||
@@ -306,7 +993,32 @@
             ) {
 
                 alert(
-                    "Silakan lengkapi semua data terlebih dahulu!"
+                    "Silakan lengkapi Nama Guru, Kelas dan Mata Pelajaran."
+                );
+
+                return;
+
+            }
+
+        }
+
+
+
+        /* KELAS GABUNGAN */
+
+        else {
+
+
+            const checkbox =
+                document.querySelectorAll(
+                    '#kelasGabungan input[type="checkbox"]:checked'
+                );
+
+
+            if (checkbox.length < 2) {
+
+                alert(
+                    "Untuk kelas gabungan, pilih minimal 2 kelas."
                 );
 
                 return;
@@ -314,174 +1026,264 @@
             }
 
 
-            /*
-             * WAKTU
-             */
-
-            const sekarang = new Date();
+            const daftarKelas = [];
 
 
-            const jam =
-                sekarang.toLocaleTimeString(
-                    "id-ID",
-                    {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                        second: "2-digit"
-                    }
-                );
+            checkbox.forEach(
+                function(item) {
 
-
-            const tanggal =
-                sekarang.toLocaleDateString(
-                    "id-ID",
-                    {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric"
-                    }
-                );
-
-
-            /*
-             * DATA YANG AKAN DIKIRIM
-             */
-
-            const data = {
-
-                tanggal: tanggal,
-
-                jam: jam,
-
-                guru: guru,
-
-                kelas: kelas,
-
-                mapel: mapel,
-
-                status: "Masuk"
-
-            };
-
-
-            /*
-             * UBAH TOMBOL
-             */
-
-            const tombol =
-                document.getElementById(
-                    "tombolAbsen"
-                );
-
-
-            tombol.disabled = true;
-
-            tombol.textContent =
-                "Mengirim data...";
-
-
-            /*
-             * KIRIM KE GOOGLE SHEETS
-             */
-
-            fetch(
-                SCRIPT_URL,
-                {
-                    method: "POST",
-
-                    mode: "no-cors",
-
-                    headers: {
-                        "Content-Type":
-                            "text/plain;charset=utf-8"
-                    },
-
-                    body:
-                        JSON.stringify(data)
+                    daftarKelas.push(
+                        item.value
+                    );
 
                 }
-            )
-            .then(function () {
-
-                /*
-                 * TAMPILKAN HASIL
-                 */
-
-                document.getElementById(
-                    "hasil"
-                ).innerHTML = `
-
-                    <div class="success">
-
-                        <div class="success-icon">
-                            ✓
-                        </div>
-
-                        <div class="success-content">
-
-                            <h3>
-                                Absensi berhasil!
-                            </h3>
-
-                            <p>
-                                Data kehadiran telah dikirim.
-                            </p>
-
-                            <div class="detail">
-
-                                <div>
-                                    <small>
-                                        Nama Guru
-                                    </small>
-
-                                    <strong>
-                                        ${guru}
-                                    </strong>
-                                </div>
+            );
 
 
-                                <div>
-                                    <small>
-                                        Kelas
-                                    </small>
-
-                                    <strong>
-                                        ${kelas}
-                                    </strong>
-                                </div>
+            kelas =
+                daftarKelas.join(", ");
 
 
-                                <div>
-                                    <small>
-                                        Mata Pelajaran
-                                    </small>
+            if (
+                guru === "" ||
+                mapel === ""
+            ) {
 
-                                    <strong>
-                                        ${mapel}
-                                    </strong>
-                                </div>
+                alert(
+                    "Silakan lengkapi Nama Guru dan Mata Pelajaran."
+                );
 
+                return;
 
-                                <div>
-                                    <small>
-                                        Jam Masuk
-                                    </small>
+            }
 
-                                    <strong>
-                                        ${jam}
-                                    </strong>
-                                </div>
+        }
 
 
-                                <div>
-                                    <small>
-                                        Tanggal
-                                    </small>
 
-                                    <strong>
-                                        ${tanggal}
-                                    </strong>
-                                </div>
+        /* DATA MENGAJAR */
+
+        const data = {
+
+            tanggal: tanggal,
+
+            jam: jam,
+
+            guru: guru,
+
+            kelas: kelas,
+
+            mapel: mapel,
+
+            status: "Masuk"
+
+        };
+
+
+        kirimData(
+            data,
+            "Absensi mengajar berhasil!"
+        );
+
+
+    }
+
+
+
+    /* =====================
+       KEGIATAN BERSAMA
+    ====================== */
+
+    else {
+
+
+        const kegiatan =
+            document.getElementById(
+                "kegiatan"
+            ).value;
+
+
+        if (kegiatan === "") {
+
+            alert(
+                "Silakan pilih kegiatan terlebih dahulu."
+            );
+
+            return;
+
+        }
+
+
+        const data = {
+
+            tanggal: tanggal,
+
+            jam: jam,
+
+            guru: "",
+
+            kelas: "Semua Kelas",
+
+            mapel: "",
+
+            status: kegiatan
+
+        };
+
+
+        kirimData(
+            data,
+            "Kegiatan bersama berhasil dicatat!"
+        );
+
+    }
+
+}
+
+
+
+/* =========================
+   KIRIM KE GOOGLE SHEETS
+========================= */
+
+function kirimData(
+    data,
+    pesan
+) {
+
+
+    const tombol =
+        document.getElementById(
+            "tombolAbsen"
+        );
+
+
+    tombol.disabled = true;
+
+
+    tombol.textContent =
+        "Mengirim data...";
+
+
+
+    fetch(
+        SCRIPT_URL,
+        {
+
+            method: "POST",
+
+            mode: "no-cors",
+
+            headers: {
+
+                "Content-Type":
+                    "text/plain;charset=utf-8"
+
+            },
+
+            body:
+                JSON.stringify(data)
+
+        }
+
+    )
+
+    .then(
+        function() {
+
+
+            document.getElementById(
+                "hasil"
+            ).innerHTML = `
+
+                <div class="success">
+
+                    <div class="success-icon">
+                        ✓
+                    </div>
+
+
+                    <div class="success-content">
+
+                        <h3>
+                            ${pesan}
+                        </h3>
+
+                        <p>
+                            Data telah dikirim
+                            ke sistem.
+                        </p>
+
+
+                        <div class="detail">
+
+                            <div>
+
+                                <small>
+                                    Tanggal
+                                </small>
+
+                                <strong>
+                                    ${data.tanggal}
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Jam
+                                </small>
+
+                                <strong>
+                                    ${data.jam}
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Guru
+                                </small>
+
+                                <strong>
+                                    ${
+                                        data.guru ||
+                                        "Tidak diperlukan"
+                                    }
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Kelas
+                                </small>
+
+                                <strong>
+                                    ${data.kelas}
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Mata Pelajaran
+                                </small>
+
+                                <strong>
+                                    ${
+                                        data.mapel ||
+                                        data.status
+                                    }
+                                </strong>
 
                             </div>
 
@@ -489,41 +1291,48 @@
 
                     </div>
 
-                `;
+                </div>
+
+            `;
 
 
-                /*
-                 * KEMBALIKAN TOMBOL
-                 */
-
-                tombol.disabled = false;
-
-                tombol.innerHTML =
-                    "✓ &nbsp; ABSEN MASUK";
-
-            })
+            tombol.disabled = false;
 
 
-            .catch(function (error) {
-
-                console.error(error);
-
-
-                alert(
-                    "Terjadi kesalahan saat mengirim data."
-                );
-
-
-                tombol.disabled = false;
-
-                tombol.innerHTML =
-                    "✓ &nbsp; ABSEN MASUK";
-
-            });
+            tombol.innerHTML =
+                "✓ &nbsp; ABSEN MASUK";
 
         }
 
-    </script>
+    )
+
+
+    .catch(
+        function(error) {
+
+
+            console.error(error);
+
+
+            alert(
+                "Terjadi kesalahan saat mengirim data."
+            );
+
+
+            tombol.disabled = false;
+
+
+            tombol.innerHTML =
+                "✓ &nbsp; ABSEN MASUK";
+
+        }
+    );
+
+}
+
+
+</script>
+
 
 </body>
 
