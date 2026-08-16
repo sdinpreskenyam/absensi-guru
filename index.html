@@ -1496,18 +1496,85 @@ function kirimData(
    FORMAT TANGGAL
 ========================= */
 
-function tanggalUntukPerbandingan(
-    nilai
-) {
+function tanggalUntukPerbandingan(nilai) {
 
-    if (
-        nilai === null ||
-        nilai === undefined
-    ) {
-
+    if (nilai === null || nilai === undefined) {
         return "";
-
     }
+
+    const teks = String(nilai).trim();
+
+    // Jika format ISO: 2026-08-17
+    if (/^\d{4}-\d{2}-\d{2}/.test(teks)) {
+        return teks.substring(0, 10);
+    }
+
+    // Jika format 17/08/2026 atau 17-08-2026
+    const cocok = teks.match(
+        /^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/
+    );
+
+    if (cocok) {
+        return (
+            cocok[3] + "-" +
+            String(cocok[2]).padStart(2, "0") + "-" +
+            String(cocok[1]).padStart(2, "0")
+        );
+    }
+
+    // Jika format Indonesia:
+    // 17 Agustus 2026
+    const bulanIndonesia = {
+        januari: "01",
+        februari: "02",
+        maret: "03",
+        april: "04",
+        mei: "05",
+        juni: "06",
+        juli: "07",
+        agustus: "08",
+        september: "09",
+        oktober: "10",
+        november: "11",
+        desember: "12"
+    };
+
+    const cocokIndonesia = teks.match(
+        /^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/
+    );
+
+    if (cocokIndonesia) {
+
+        const hari = String(
+            cocokIndonesia[1]
+        ).padStart(2, "0");
+
+        const bulan =
+            bulanIndonesia[
+                cocokIndonesia[2].toLowerCase()
+            ];
+
+        const tahun =
+            cocokIndonesia[3];
+
+        if (bulan) {
+            return tahun + "-" + bulan + "-" + hari;
+        }
+    }
+
+    // Jika berupa tanggal yang bisa dibaca browser
+    const d = new Date(nilai);
+
+    if (!isNaN(d.getTime())) {
+        return (
+            d.getFullYear() + "-" +
+            String(d.getMonth() + 1).padStart(2, "0") + "-" +
+            String(d.getDate()).padStart(2, "0")
+        );
+    }
+
+    return teks;
+}
 
 
     const teks =
