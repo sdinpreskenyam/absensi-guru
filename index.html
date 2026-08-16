@@ -54,7 +54,9 @@
     <main>
 
 
-        <!-- WELCOME -->
+        <!-- =========================
+             WELCOME
+        ========================== -->
 
         <section class="welcome">
 
@@ -124,19 +126,60 @@
                     onchange="ubahJenisKegiatan()">
 
                     <option value="mengajar">
-
                         Mengajar
-
                     </option>
 
-
                     <option value="bersama">
-
                         Kegiatan Bersama
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =========================
+                 JAM PELAJARAN
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="jamPelajaran">
+
+                    Jam Pelajaran
+
+                </label>
+
+
+                <select
+                    id="jamPelajaran"
+                    onchange="cekJamPelajaran()">
+
+                    <option value="jam1">
+                        Jam ke-1
+                    </option>
+
+                    <option
+                        value="jam2"
+                        id="pilihanJam2">
+
+                        Jam ke-2
 
                     </option>
 
                 </select>
+
+
+                <div
+                    id="infoJam"
+                    style="
+                        margin-top:8px;
+                        font-size:13px;
+                        color:#666;
+                    ">
+
+                </div>
 
             </div>
 
@@ -163,155 +206,80 @@
                     <select id="guru">
 
                         <option value="">
-
                             -- Pilih Guru --
-
                         </option>
 
+                        <option>ABDUL KADIR</option>
 
-                        <option>
-                            ABDUL KADIR
-                        </option>
+                        <option>ARISUGIANTO LAMBA, S.Pd</option>
 
-                        <option>
-                            ARISUGIANTO LAMBA, S.Pd
-                        </option>
+                        <option>DANIEL BAYE, S.Pd.Gr</option>
 
-                        <option>
-                            DANIEL BAYE, S.Pd.Gr
-                        </option>
+                        <option>DEWI</option>
 
-                        <option>
-                            DEWI
-                        </option>
+                        <option>DIAN</option>
 
-                        <option>
-                            DIAN
-                        </option>
+                        <option>ELI SEPTIANI, S.Pd.Gr</option>
 
-                        <option>
-                            ELI SEPTIANI, S.Pd.Gr
-                        </option>
+                        <option>ESTER MARURU, S.Pd.Gr</option>
 
-                        <option>
-                            ESTER MARURU, S.Pd.Gr
-                        </option>
+                        <option>HANA YULIANA TAFURAN, S.PdK</option>
 
-                        <option>
-                            HANA YULIANA TAFURAN, S.PdK
-                        </option>
+                        <option>HENDRA ASSORAN, S.Pd</option>
 
-                        <option>
-                            HENDRA ASSORAN, S.Pd
-                        </option>
+                        <option>HERMIN DANDA, S.Pd.Gr</option>
 
-                        <option>
-                            HERMIN DANDA, S.Pd.Gr
-                        </option>
+                        <option>HERMIN YAKUB, S.Pd.Gr</option>
 
-                        <option>
-                            HERMIN YAKUB, S.Pd.Gr
-                        </option>
+                        <option>ISAK MURIB, S.Pd</option>
 
-                        <option>
-                            ISAK MURIB, S.Pd
-                        </option>
+                        <option>LEDY MOBONGGI, S.Pd.Gr</option>
 
-                        <option>
-                            LEDY MOBONGGI, S.Pd.Gr
-                        </option>
+                        <option>MAMA TOS</option>
 
-                        <option>
-                            MAMA TOS
-                        </option>
+                        <option>MARIANA PADAUNAN, S.Pd.Gr</option>
 
-                        <option>
-                            MARIANA PADAUNAN, S.Pd.Gr
-                        </option>
+                        <option>MARIU SILMA, S.Pd.Gr</option>
 
-                        <option>
-                            MARIU SILMA, S.Pd.Gr
-                        </option>
+                        <option>MEDIAN TANDI LEMBANG, S.Pd.Gr</option>
 
-                        <option>
-                            MEDIAN TANDI LEMBANG, S.Pd.Gr
-                        </option>
+                        <option>MURIB</option>
 
-                        <option>
-                            MURIB
-                        </option>
+                        <option>NIHA MALISA</option>
 
-                        <option>
-                            NIHA MALISA
-                        </option>
+                        <option>ORY MANGIRI, S.Pd.Gr</option>
 
-                        <option>
-                            ORY MANGIRI, S.Pd.Gr
-                        </option>
+                        <option>PENAS WENDA, S.PdK</option>
 
-                        <option>
-                            PENAS WENDA, S.PdK
-                        </option>
+                        <option>PETRUS ROLAND WABISER, S.Pd.Gr</option>
 
-                        <option>
-                            PETRUS ROLAND WABISER, S.Pd.Gr
-                        </option>
+                        <option>PILIPA PAGILING, S.Pd.Gr</option>
 
-                        <option>
-                            PILIPA PAGILING, S.Pd.Gr
-                        </option>
+                        <option>PITMA GANGKA, S.Pd.Gr</option>
 
-                        <option>
-                            PITMA GANGKA, S.Pd.Gr
-                        </option>
+                        <option>RIKA DARMAWATI, S.Pd.Gr</option>
 
-                        <option>
-                            RIKA DARMAWATI, S.Pd.Gr
-                        </option>
+                        <option>SANTIANI TANDI LEMBANG, S.Pd.Gr</option>
 
-                        <option>
-                            SANTIANI TANDI LEMBANG, S.Pd.Gr
-                        </option>
+                        <option>SARTIA DADI, S.Pd.Gr</option>
 
-                        <option>
-                            SARTIA DADI, S.Pd.Gr
-                        </option>
+                        <option>SIMON, S.Pd.Gr</option>
 
-                        <option>
-                            SIMON, S.Pd.Gr
-                        </option>
+                        <option>SOFIA</option>
 
-                        <option>
-                            SOFIA
-                        </option>
+                        <option>SONTIANA VERONIKA BR PASARIBU, S.Pd.Gr</option>
 
-                        <option>
-                            SONTIANA VERONIKA BR PASARIBU, S.Pd.Gr
-                        </option>
+                        <option>TETI PAGEWANG, S.Pd.Gr</option>
 
-                        <option>
-                            TETI PAGEWANG, S.Pd.Gr
-                        </option>
+                        <option>VIA</option>
 
-                        <option>
-                            VIA
-                        </option>
+                        <option>YAKOMINA WENDA, S.PdK</option>
 
-                        <option>
-                            YAKOMINA WENDA, S.PdK
-                        </option>
+                        <option>YASON WASSAR, S.PdK</option>
 
-                        <option>
-                            YASON WASSAR, S.PdK
-                        </option>
+                        <option>YOHANIS KARAPA, S.Pd.Gr</option>
 
-                        <option>
-                            YOHANIS KARAPA, S.Pd.Gr
-                        </option>
-
-                        <option>
-                            YUSTINA PASORONG, S.Pd.Gr
-                        </option>
+                        <option>YUSTINA PASORONG, S.Pd.Gr</option>
 
                     </select>
 
@@ -335,16 +303,11 @@
                         onchange="ubahJenisKelas()">
 
                         <option value="tunggal">
-
                             Kelas Tunggal
-
                         </option>
 
-
                         <option value="gabungan">
-
                             Kelas Gabungan
-
                         </option>
 
                     </select>
@@ -369,9 +332,7 @@
                     <select id="kelas">
 
                         <option value="">
-
                             -- Pilih Kelas --
-
                         </option>
 
                         <option>1A</option>
@@ -425,154 +386,112 @@
 
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="1A">
+                            <input type="checkbox" value="1A">
                             1A
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="1B">
+                            <input type="checkbox" value="1B">
                             1B
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="1C">
+                            <input type="checkbox" value="1C">
                             1C
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="1D">
+                            <input type="checkbox" value="1D">
                             1D
                         </label>
 
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="2A">
+                            <input type="checkbox" value="2A">
                             2A
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="2B">
+                            <input type="checkbox" value="2B">
                             2B
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="2C">
+                            <input type="checkbox" value="2C">
                             2C
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="2D">
+                            <input type="checkbox" value="2D">
                             2D
                         </label>
 
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="3A">
+                            <input type="checkbox" value="3A">
                             3A
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="3B">
+                            <input type="checkbox" value="3B">
                             3B
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="3C">
+                            <input type="checkbox" value="3C">
                             3C
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="3D">
+                            <input type="checkbox" value="3D">
                             3D
                         </label>
 
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="4A">
+                            <input type="checkbox" value="4A">
                             4A
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="4B">
+                            <input type="checkbox" value="4B">
                             4B
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="4C">
+                            <input type="checkbox" value="4C">
                             4C
                         </label>
 
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="5A">
+                            <input type="checkbox" value="5A">
                             5A
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="5B">
+                            <input type="checkbox" value="5B">
                             5B
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="5C">
+                            <input type="checkbox" value="5C">
                             5C
                         </label>
 
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="6A">
+                            <input type="checkbox" value="6A">
                             6A
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="6B">
+                            <input type="checkbox" value="6B">
                             6B
                         </label>
 
                         <label>
-                            <input
-                                type="checkbox"
-                                value="6C">
+                            <input type="checkbox" value="6C">
                             6C
                         </label>
 
@@ -597,50 +516,28 @@
                     <select id="mapel">
 
                         <option value="">
-
                             -- Pilih Mata Pelajaran --
-
                         </option>
 
-                        <option>
-                            AGAMA ISLAM
-                        </option>
+                        <option>AGAMA ISLAM</option>
 
-                        <option>
-                            AGAMA KRISTEN
-                        </option>
+                        <option>AGAMA KRISTEN</option>
 
-                        <option>
-                            BAHASA INDONESIA
-                        </option>
+                        <option>BAHASA INDONESIA</option>
 
-                        <option>
-                            BAHASA INGGRIS
-                        </option>
+                        <option>BAHASA INGGRIS</option>
 
-                        <option>
-                            IPAS
-                        </option>
+                        <option>IPAS</option>
 
-                        <option>
-                            MATEMATIKA
-                        </option>
+                        <option>MATEMATIKA</option>
 
-                        <option>
-                            P5
-                        </option>
+                        <option>P5</option>
 
-                        <option>
-                            PENDIDIKAN PANCASILA
-                        </option>
+                        <option>PENDIDIKAN PANCASILA</option>
 
-                        <option>
-                            PJOK
-                        </option>
+                        <option>PJOK</option>
 
-                        <option>
-                            SENI
-                        </option>
+                        <option>SENI</option>
 
                     </select>
 
@@ -672,9 +569,7 @@
                     <select id="kegiatan">
 
                         <option value="">
-
                             -- Pilih Kegiatan --
-
                         </option>
 
                         <option>
@@ -726,6 +621,131 @@
         </section>
 
 
+
+        <!-- =========================
+             DASHBOARD ABSENSI
+        ========================== -->
+
+        <section class="form-card dashboard-card">
+
+            <h2>
+                📊 Data Absensi Hari Ini
+            </h2>
+
+            <p style="
+                color:#666;
+                margin-bottom:15px;
+            ">
+
+                Daftar guru dan kegiatan
+                yang sudah tercatat hari ini.
+
+            </p>
+
+
+            <div
+                id="statusDashboard"
+                style="
+                    text-align:center;
+                    padding:15px;
+                    color:#666;
+                ">
+
+                Memuat data...
+
+            </div>
+
+
+            <div
+                style="
+                    overflow-x:auto;
+                    width:100%;
+                ">
+
+                <table
+                    id="tabelAbsensi"
+                    style="
+                        width:100%;
+                        border-collapse:collapse;
+                        display:none;
+                    ">
+
+                    <thead>
+
+                        <tr>
+
+                            <th style="
+                                padding:10px;
+                                border:1px solid #ddd;
+                                background:#f2f2f2;
+                            ">
+                                NO
+                            </th>
+
+                            <th style="
+                                padding:10px;
+                                border:1px solid #ddd;
+                                background:#f2f2f2;
+                            ">
+                                JAM
+                            </th>
+
+                            <th style="
+                                padding:10px;
+                                border:1px solid #ddd;
+                                background:#f2f2f2;
+                            ">
+                                NAMA GURU
+                            </th>
+
+                            <th style="
+                                padding:10px;
+                                border:1px solid #ddd;
+                                background:#f2f2f2;
+                            ">
+                                KELAS
+                            </th>
+
+                            <th style="
+                                padding:10px;
+                                border:1px solid #ddd;
+                                background:#f2f2f2;
+                            ">
+                                JAM PELAJARAN
+                            </th>
+
+                            <th style="
+                                padding:10px;
+                                border:1px solid #ddd;
+                                background:#f2f2f2;
+                            ">
+                                MATA PELAJARAN
+                            </th>
+
+                            <th style="
+                                padding:10px;
+                                border:1px solid #ddd;
+                                background:#f2f2f2;
+                            ">
+                                STATUS
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="isiTabel">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
     </main>
 
 
@@ -753,7 +773,9 @@
 <script>
 
 
-/* URL APPS SCRIPT */
+/* =========================
+   URL APPS SCRIPT
+========================= */
 
 const SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbxoUgzNMkLCFeJxtZPzIcAQBon0zo7Rg-ZWjE8q03-fux4zrEfyR5ACoVdshmewj9k/exec";
@@ -798,6 +820,9 @@ function tampilkanWaktu() {
 
     document.getElementById("tanggal")
         .textContent = tanggal;
+
+
+    cekJamPelajaran();
 
 }
 
@@ -908,6 +933,94 @@ function ubahJenisKelas() {
 
 
 /* =========================
+   CEK JAM PELAJARAN
+========================= */
+
+function cekJamPelajaran() {
+
+    const sekarang = new Date();
+
+    const jamSekarang =
+        sekarang.getHours();
+
+
+    const menitSekarang =
+        sekarang.getMinutes();
+
+
+    const totalMenit =
+        jamSekarang * 60 +
+        menitSekarang;
+
+
+    const pilihanJam2 =
+        document.getElementById(
+            "pilihanJam2"
+        );
+
+
+    const pilihan =
+        document.getElementById(
+            "jamPelajaran"
+        );
+
+
+    const info =
+        document.getElementById(
+            "infoJam"
+        );
+
+
+    /*
+       Jam ke-2 dibuka mulai pukul 08.00
+    */
+
+    if (totalMenit >= 8 * 60) {
+
+        pilihanJam2.disabled =
+            false;
+
+        info.textContent =
+            "✓ Jam ke-2 sudah terbuka.";
+
+        info.style.color =
+            "green";
+
+    }
+
+    else {
+
+        pilihanJam2.disabled =
+            true;
+
+
+        /*
+           Kalau sebelumnya memilih
+           jam ke-2, otomatis kembali
+           ke jam ke-1.
+        */
+
+        if (pilihan.value === "jam2") {
+
+            pilihan.value =
+                "jam1";
+
+        }
+
+
+        info.textContent =
+            "🔒 Jam ke-2 akan terbuka mulai pukul 08.00.";
+
+        info.style.color =
+            "#b26a00";
+
+    }
+
+}
+
+
+
+/* =========================
    ABSEN MASUK
 ========================= */
 
@@ -944,6 +1057,22 @@ function absenMasuk() {
                 year: "numeric"
             }
         );
+
+
+    /*
+       Ambil jam pelajaran
+    */
+
+    const pilihanJam =
+        document.getElementById(
+            "jamPelajaran"
+        ).value;
+
+
+    const jamPelajaran =
+        pilihanJam === "jam1"
+            ? "Jam ke-1"
+            : "Jam ke-2";
 
 
 
@@ -1073,6 +1202,9 @@ function absenMasuk() {
 
             kelas: kelas,
 
+            jamPelajaran:
+                jamPelajaran,
+
             mapel: mapel,
 
             status: "Masuk"
@@ -1124,6 +1256,9 @@ function absenMasuk() {
 
             kelas: "Semua Kelas",
 
+            jamPelajaran:
+                jamPelajaran,
+
             mapel: "",
 
             status: kegiatan
@@ -1163,7 +1298,6 @@ function kirimData(
 
     tombol.textContent =
         "Mengirim data...";
-
 
 
     fetch(
@@ -1209,6 +1343,7 @@ function kirimData(
                             ${pesan}
                         </h3>
 
+
                         <p>
                             Data telah dikirim
                             ke sistem.
@@ -1238,6 +1373,19 @@ function kirimData(
 
                                 <strong>
                                     ${data.jam}
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <small>
+                                    Jam Pelajaran
+                                </small>
+
+                                <strong>
+                                    ${data.jamPelajaran}
                                 </strong>
 
                             </div>
@@ -1302,6 +1450,17 @@ function kirimData(
             tombol.innerHTML =
                 "✓ &nbsp; ABSEN MASUK";
 
+
+            /*
+               Setelah berhasil,
+               dashboard diperbarui.
+            */
+
+            setTimeout(
+                muatDashboard,
+                1000
+            );
+
         }
 
     )
@@ -1329,6 +1488,302 @@ function kirimData(
     );
 
 }
+
+
+
+/* =========================
+   DASHBOARD ABSENSI
+========================= */
+
+function muatDashboard() {
+
+
+    const status =
+        document.getElementById(
+            "statusDashboard"
+        );
+
+
+    const tabel =
+        document.getElementById(
+            "tabelAbsensi"
+        );
+
+
+    const isi =
+        document.getElementById(
+            "isiTabel"
+        );
+
+
+    status.textContent =
+        "Memuat data absensi...";
+
+
+    tabel.style.display =
+        "none";
+
+
+    /*
+       Ambil data dari doGet
+       Apps Script
+    */
+
+    fetch(
+        SCRIPT_URL
+    )
+
+    .then(
+        function(response) {
+
+            return response.json();
+
+        }
+    )
+
+    .then(
+        function(data) {
+
+
+            if (
+                !Array.isArray(data)
+            ) {
+
+                throw new Error(
+                    "Format data tidak sesuai."
+                );
+
+            }
+
+
+            isi.innerHTML = "";
+
+
+            /*
+               Tanggal hari ini
+            */
+
+            const hariIni =
+                new Date()
+                    .toLocaleDateString(
+                        "id-ID",
+                        {
+                            day: "numeric",
+                            month: "long",
+                            year: "numeric"
+                        }
+                    );
+
+
+            /*
+               Filter data hari ini
+            */
+
+            const dataHariIni =
+                data.filter(
+                    function(item) {
+
+                        return (
+                            String(
+                                item.tanggal
+                            ).trim()
+                            ===
+                            String(
+                                hariIni
+                            ).trim()
+                        );
+
+                    }
+                );
+
+
+            /*
+               Jika tidak ada data
+            */
+
+            if (
+                dataHariIni.length === 0
+            ) {
+
+                status.innerHTML =
+                    "📋 Belum ada absensi hari ini.";
+
+                tabel.style.display =
+                    "none";
+
+                return;
+
+            }
+
+
+            /*
+               Tampilkan data
+            */
+
+            dataHariIni.forEach(
+                function(item, index) {
+
+
+                    const baris =
+                        document.createElement(
+                            "tr"
+                        );
+
+
+                    baris.innerHTML = `
+
+                        <td style="
+                            padding:10px;
+                            border:1px solid #ddd;
+                            text-align:center;
+                        ">
+                            ${index + 1}
+                        </td>
+
+
+                        <td style="
+                            padding:10px;
+                            border:1px solid #ddd;
+                            white-space:nowrap;
+                        ">
+                            ${item.jam || "-"}
+                        </td>
+
+
+                        <td style="
+                            padding:10px;
+                            border:1px solid #ddd;
+                        ">
+                            ${
+                                item.guru ||
+                                "Kegiatan Bersama"
+                            }
+                        </td>
+
+
+                        <td style="
+                            padding:10px;
+                            border:1px solid #ddd;
+                        ">
+                            ${item.kelas || "-"}
+                        </td>
+
+
+                        <td style="
+                            padding:10px;
+                            border:1px solid #ddd;
+                            white-space:nowrap;
+                        ">
+                            ${
+                                item.jamPelajaran ||
+                                "-"
+                            }
+                        </td>
+
+
+                        <td style="
+                            padding:10px;
+                            border:1px solid #ddd;
+                        ">
+                            ${
+                                item.mapel ||
+                                "-"
+                            }
+                        </td>
+
+
+                        <td style="
+                            padding:10px;
+                            border:1px solid #ddd;
+                        ">
+                            ${
+                                item.status ||
+                                "-"
+                            }
+                        </td>
+
+                    `;
+
+
+                    isi.appendChild(
+                        baris
+                    );
+
+                }
+            );
+
+
+            status.innerHTML =
+                "✓ Data absensi hari ini";
+
+
+            tabel.style.display =
+                "table";
+
+        }
+
+    )
+
+    .catch(
+        function(error) {
+
+
+            console.error(error);
+
+
+            status.innerHTML = `
+
+                ❌ Tidak dapat mengambil
+                data absensi.
+
+                <br><br>
+
+                <small>
+                    Pastikan Apps Script
+                    sudah memiliki fungsi
+                    doGet().
+                </small>
+
+            `;
+
+        }
+    );
+
+}
+
+
+
+/* =========================
+   LOAD DASHBOARD
+========================= */
+
+window.addEventListener(
+    "load",
+    function() {
+
+        /*
+           Tunggu sebentar agar
+           halaman selesai dimuat.
+        */
+
+        setTimeout(
+            muatDashboard,
+            1000
+        );
+
+    }
+);
+
+
+/*
+   Refresh dashboard setiap
+   30 detik.
+*/
+
+setInterval(
+    muatDashboard,
+    30000
+);
 
 
 </script>
