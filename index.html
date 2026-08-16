@@ -210,75 +210,40 @@
                         </option>
 
                         <option>ABDUL KADIR</option>
-
                         <option>ARISUGIANTO LAMBA, S.Pd</option>
-
                         <option>DANIEL BAYE, S.Pd.Gr</option>
-
                         <option>DEWI</option>
-
                         <option>DIAN</option>
-
                         <option>ELI SEPTIANI, S.Pd.Gr</option>
-
                         <option>ESTER MARURU, S.Pd.Gr</option>
-
                         <option>HANA YULIANA TAFURAN, S.PdK</option>
-
                         <option>HENDRA ASSORAN, S.Pd</option>
-
                         <option>HERMIN DANDA, S.Pd.Gr</option>
-
                         <option>HERMIN YAKUB, S.Pd.Gr</option>
-
                         <option>ISAK MURIB, S.Pd</option>
-
                         <option>LEDY MOBONGGI, S.Pd.Gr</option>
-
                         <option>MAMA TOS</option>
-
                         <option>MARIANA PADAUNAN, S.Pd.Gr</option>
-
                         <option>MARIU SILMA, S.Pd.Gr</option>
-
                         <option>MEDIAN TANDI LEMBANG, S.Pd.Gr</option>
-
                         <option>MURIB</option>
-
                         <option>NIHA MALISA</option>
-
                         <option>ORY MANGIRI, S.Pd.Gr</option>
-
                         <option>PENAS WENDA, S.PdK</option>
-
                         <option>PETRUS ROLAND WABISER, S.Pd.Gr</option>
-
                         <option>PILIPA PAGILING, S.Pd.Gr</option>
-
                         <option>PITMA GANGKA, S.Pd.Gr</option>
-
                         <option>RIKA DARMAWATI, S.Pd.Gr</option>
-
                         <option>SANTIANI TANDI LEMBANG, S.Pd.Gr</option>
-
                         <option>SARTIA DADI, S.Pd.Gr</option>
-
                         <option>SIMON, S.Pd.Gr</option>
-
                         <option>SOFIA</option>
-
                         <option>SONTIANA VERONIKA BR PASARIBU, S.Pd.Gr</option>
-
                         <option>TETI PAGEWANG, S.Pd.Gr</option>
-
                         <option>VIA</option>
-
                         <option>YAKOMINA WENDA, S.PdK</option>
-
                         <option>YASON WASSAR, S.PdK</option>
-
                         <option>YOHANIS KARAPA, S.Pd.Gr</option>
-
                         <option>YUSTINA PASORONG, S.Pd.Gr</option>
 
                     </select>
@@ -520,23 +485,14 @@
                         </option>
 
                         <option>AGAMA ISLAM</option>
-
                         <option>AGAMA KRISTEN</option>
-
                         <option>BAHASA INDONESIA</option>
-
                         <option>BAHASA INGGRIS</option>
-
                         <option>IPAS</option>
-
                         <option>MATEMATIKA</option>
-
                         <option>P5</option>
-
                         <option>PENDIDIKAN PANCASILA</option>
-
                         <option>PJOK</option>
-
                         <option>SENI</option>
 
                     </select>
@@ -790,7 +746,6 @@ function tampilkanWaktu() {
 
     const sekarang = new Date();
 
-
     const jam =
         sekarang.toLocaleTimeString(
             "id-ID",
@@ -800,7 +755,6 @@ function tampilkanWaktu() {
                 second: "2-digit"
             }
         );
-
 
     const tanggal =
         sekarang.toLocaleDateString(
@@ -813,14 +767,11 @@ function tampilkanWaktu() {
             }
         );
 
-
     document.getElementById("jam")
         .textContent = jam;
 
-
     document.getElementById("tanggal")
         .textContent = tanggal;
-
 
     cekJamPelajaran();
 
@@ -847,18 +798,15 @@ function ubahJenisKegiatan() {
             "jenisKegiatan"
         ).value;
 
-
     const formMengajar =
         document.getElementById(
             "formMengajar"
         );
 
-
     const formBersama =
         document.getElementById(
             "formBersama"
         );
-
 
     if (jenis === "mengajar") {
 
@@ -895,18 +843,15 @@ function ubahJenisKelas() {
             "jenisKelas"
         ).value;
 
-
     const tunggal =
         document.getElementById(
             "kelasTunggal"
         );
 
-
     const gabungan =
         document.getElementById(
             "kelasGabungan"
         );
-
 
     if (jenis === "tunggal") {
 
@@ -951,24 +896,20 @@ function cekJamPelajaran() {
         jamSekarang * 60 +
         menitSekarang;
 
-
     const pilihanJam2 =
         document.getElementById(
             "pilihanJam2"
         );
-
 
     const pilihan =
         document.getElementById(
             "jamPelajaran"
         );
 
-
     const info =
         document.getElementById(
             "infoJam"
         );
-
 
     if (totalMenit >= 480) {
 
@@ -988,7 +929,6 @@ function cekJamPelajaran() {
         pilihanJam2.disabled =
             true;
 
-
         if (
             pilihan.value === "jam2"
         ) {
@@ -997,7 +937,6 @@ function cekJamPelajaran() {
                 "jam1";
 
         }
-
 
         info.textContent =
             "🔒 Jam ke-2 akan terbuka mulai pukul 08.00.";
@@ -1017,16 +956,13 @@ function cekJamPelajaran() {
 
 function absenMasuk() {
 
-
     const jenisKegiatan =
         document.getElementById(
             "jenisKegiatan"
         ).value;
 
-
     const sekarang =
         new Date();
-
 
     const jam =
         sekarang.toLocaleTimeString(
@@ -1038,7 +974,6 @@ function absenMasuk() {
             }
         );
 
-
     const tanggal =
         sekarang.toLocaleDateString(
             "id-ID",
@@ -1049,12 +984,10 @@ function absenMasuk() {
             }
         );
 
-
     const pilihanJam =
         document.getElementById(
             "jamPelajaran"
         ).value;
-
 
     const jamPelajaran =
         pilihanJam === "jam1"
@@ -1071,24 +1004,20 @@ function absenMasuk() {
         jenisKegiatan === "mengajar"
     ) {
 
-
         const guru =
             document.getElementById(
                 "guru"
             ).value;
-
 
         const jenisKelas =
             document.getElementById(
                 "jenisKelas"
             ).value;
 
-
         const mapel =
             document.getElementById(
                 "mapel"
             ).value;
-
 
         let kelas = "";
 
@@ -1104,7 +1033,6 @@ function absenMasuk() {
                 document.getElementById(
                     "kelas"
                 ).value;
-
 
             if (
                 guru === "" ||
@@ -1128,12 +1056,10 @@ function absenMasuk() {
 
         else {
 
-
             const checkbox =
                 document.querySelectorAll(
                     '#kelasGabungan input[type="checkbox"]:checked'
                 );
-
 
             if (
                 checkbox.length < 2
@@ -1147,10 +1073,8 @@ function absenMasuk() {
 
             }
 
-
             const daftarKelas =
                 [];
-
 
             checkbox.forEach(
                 function(item) {
@@ -1162,10 +1086,8 @@ function absenMasuk() {
                 }
             );
 
-
             kelas =
                 daftarKelas.join(", ");
-
 
             if (
                 guru === "" ||
@@ -1226,12 +1148,10 @@ function absenMasuk() {
 
     else {
 
-
         const kegiatan =
             document.getElementById(
                 "kegiatan"
             ).value;
-
 
         if (
             kegiatan === ""
@@ -1244,7 +1164,6 @@ function absenMasuk() {
             return;
 
         }
-
 
         const data = {
 
@@ -1271,7 +1190,6 @@ function absenMasuk() {
 
         };
 
-
         kirimData(
             data,
             "Kegiatan bersama berhasil dicatat!"
@@ -1292,20 +1210,16 @@ function kirimData(
     pesan
 ) {
 
-
     const tombol =
         document.getElementById(
             "tombolAbsen"
         );
 
-
     tombol.disabled =
         true;
 
-
     tombol.textContent =
         "Mengirim data...";
-
 
     fetch(
         SCRIPT_URL,
@@ -1334,7 +1248,6 @@ function kirimData(
     .then(
         function() {
 
-
             document.getElementById(
                 "hasil"
             ).innerHTML = `
@@ -1345,19 +1258,16 @@ function kirimData(
                         ✓
                     </div>
 
-
                     <div class="success-content">
 
                         <h3>
                             ${pesan}
                         </h3>
 
-
                         <p>
                             Data telah dikirim
                             ke sistem.
                         </p>
-
 
                         <div class="detail">
 
@@ -1373,7 +1283,6 @@ function kirimData(
 
                             </div>
 
-
                             <div>
 
                                 <small>
@@ -1386,7 +1295,6 @@ function kirimData(
 
                             </div>
 
-
                             <div>
 
                                 <small>
@@ -1398,7 +1306,6 @@ function kirimData(
                                 </strong>
 
                             </div>
-
 
                             <div>
 
@@ -1415,7 +1322,6 @@ function kirimData(
 
                             </div>
 
-
                             <div>
 
                                 <small>
@@ -1427,7 +1333,6 @@ function kirimData(
                                 </strong>
 
                             </div>
-
 
                             <div>
 
@@ -1452,14 +1357,11 @@ function kirimData(
 
             `;
 
-
             tombol.disabled =
                 false;
 
-
             tombol.innerHTML =
                 "✓ &nbsp; ABSEN MASUK";
-
 
             setTimeout(
                 muatDashboard,
@@ -1492,89 +1394,20 @@ function kirimData(
 
 
 
-/* =========================
-   FORMAT TANGGAL
-========================= */
+/* =================================================
+   FORMAT TANGGAL UNTUK DASHBOARD
+   ================================================= */
 
 function tanggalUntukPerbandingan(nilai) {
 
-    if (nilai === null || nilai === undefined) {
+    if (
+        nilai === null ||
+        nilai === undefined
+    ) {
+
         return "";
+
     }
-
-    const teks = String(nilai).trim();
-
-    // Jika format ISO: 2026-08-17
-    if (/^\d{4}-\d{2}-\d{2}/.test(teks)) {
-        return teks.substring(0, 10);
-    }
-
-    // Jika format 17/08/2026 atau 17-08-2026
-    const cocok = teks.match(
-        /^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/
-    );
-
-    if (cocok) {
-        return (
-            cocok[3] + "-" +
-            String(cocok[2]).padStart(2, "0") + "-" +
-            String(cocok[1]).padStart(2, "0")
-        );
-    }
-
-    // Jika format Indonesia:
-    // 17 Agustus 2026
-    const bulanIndonesia = {
-        januari: "01",
-        februari: "02",
-        maret: "03",
-        april: "04",
-        mei: "05",
-        juni: "06",
-        juli: "07",
-        agustus: "08",
-        september: "09",
-        oktober: "10",
-        november: "11",
-        desember: "12"
-    };
-
-    const cocokIndonesia = teks.match(
-        /^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/
-    );
-
-    if (cocokIndonesia) {
-
-        const hari = String(
-            cocokIndonesia[1]
-        ).padStart(2, "0");
-
-        const bulan =
-            bulanIndonesia[
-                cocokIndonesia[2].toLowerCase()
-            ];
-
-        const tahun =
-            cocokIndonesia[3];
-
-        if (bulan) {
-            return tahun + "-" + bulan + "-" + hari;
-        }
-    }
-
-    // Jika berupa tanggal yang bisa dibaca browser
-    const d = new Date(nilai);
-
-    if (!isNaN(d.getTime())) {
-        return (
-            d.getFullYear() + "-" +
-            String(d.getMonth() + 1).padStart(2, "0") + "-" +
-            String(d.getDate()).padStart(2, "0")
-        );
-    }
-
-    return teks;
-}
 
 
     const teks =
@@ -1582,14 +1415,14 @@ function tanggalUntukPerbandingan(nilai) {
 
 
     /*
-       Jika Apps Script mengirim
-       tanggal dalam format ISO.
+       FORMAT ISO:
+       2026-08-17
+       atau
+       2026-08-17T00:00:00
     */
 
     if (
-        /^\d{4}-\d{2}-\d{2}/.test(
-            teks
-        )
+        /^\d{4}-\d{2}-\d{2}/.test(teks)
     ) {
 
         return teks.substring(
@@ -1601,8 +1434,10 @@ function tanggalUntukPerbandingan(nilai) {
 
 
     /*
-       Format tanggal Indonesia:
-       16/08/2026
+       FORMAT:
+       17/08/2026
+       atau
+       17-08-2026
     */
 
     const cocok =
@@ -1629,8 +1464,89 @@ function tanggalUntukPerbandingan(nilai) {
 
 
     /*
-       Jika berupa tanggal yang
-       bisa dibaca browser.
+       FORMAT INDONESIA:
+       17 Agustus 2026
+       Senin, 17 Agustus 2026
+    */
+
+    const bulanIndonesia = {
+
+        januari: "01",
+        februari: "02",
+        maret: "03",
+        april: "04",
+        mei: "05",
+        juni: "06",
+        juli: "07",
+        agustus: "08",
+        september: "09",
+        oktober: "10",
+        november: "11",
+        desember: "12"
+
+    };
+
+
+    /*
+       Hapus nama hari jika ada.
+    */
+
+    const teksBersih =
+        teks.replace(
+            /^(senin|selasa|rabu|kamis|jumat|sabtu|minggu),?\s+/i,
+            ""
+        );
+
+
+    const cocokIndonesia =
+        teksBersih.match(
+            /^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/i
+        );
+
+
+    if (
+        cocokIndonesia
+    ) {
+
+        const hari =
+            String(
+                cocokIndonesia[1]
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        const bulan =
+            bulanIndonesia[
+                cocokIndonesia[2].toLowerCase()
+            ];
+
+
+        const tahun =
+            cocokIndonesia[3];
+
+
+        if (
+            bulan
+        ) {
+
+            return (
+                tahun +
+                "-" +
+                bulan +
+                "-" +
+                hari
+            );
+
+        }
+
+    }
+
+
+    /*
+       Jika berupa objek tanggal
+       yang bisa dibaca browser.
     */
 
     const d =
@@ -1648,11 +1564,17 @@ function tanggalUntukPerbandingan(nilai) {
             "-" +
             String(
                 d.getMonth() + 1
-            ).padStart(2, "0") +
+            ).padStart(
+                2,
+                "0"
+            ) +
             "-" +
             String(
                 d.getDate()
-            ).padStart(2, "0")
+            ).padStart(
+                2,
+                "0"
+            )
         );
 
     }
@@ -1673,17 +1595,22 @@ function tanggalHariIni() {
     const sekarang =
         new Date();
 
-
     return (
         sekarang.getFullYear() +
         "-" +
         String(
             sekarang.getMonth() + 1
-        ).padStart(2, "0") +
+        ).padStart(
+            2,
+            "0"
+        ) +
         "-" +
         String(
             sekarang.getDate()
-        ).padStart(2, "0")
+        ).padStart(
+            2,
+            "0"
+        )
     );
 
 }
@@ -1696,18 +1623,15 @@ function tanggalHariIni() {
 
 function muatDashboard() {
 
-
     const status =
         document.getElementById(
             "statusDashboard"
         );
 
-
     const tabel =
         document.getElementById(
             "tabelAbsensi"
         );
-
 
     const isi =
         document.getElementById(
@@ -1756,8 +1680,7 @@ function muatDashboard() {
 
 
             /*
-               Pastikan hasil berupa
-               array.
+               Pastikan hasil berupa array.
             */
 
             if (
@@ -1776,8 +1699,7 @@ function muatDashboard() {
 
 
             /*
-               Filter berdasarkan
-               tanggal hari ini.
+               Filter tanggal hari ini.
             */
 
             const dataHariIni =
@@ -1789,7 +1711,6 @@ function muatDashboard() {
                                 item.tanggal
                             );
 
-
                         return (
                             tanggalData ===
                             hariIni
@@ -1800,7 +1721,7 @@ function muatDashboard() {
 
 
             /*
-               Tidak ada data
+               Jika tidak ada data.
             */
 
             if (
@@ -1831,8 +1752,7 @@ function muatDashboard() {
 
 
             /*
-               Urutkan berdasarkan
-               waktu terbaru.
+               Urutkan berdasarkan jam.
             */
 
             dataHariIni.sort(
@@ -1851,7 +1771,7 @@ function muatDashboard() {
 
 
             /*
-               Buat isi tabel
+               Buat isi tabel.
             */
 
             dataHariIni.forEach(
@@ -1859,7 +1779,6 @@ function muatDashboard() {
                     item,
                     index
                 ) {
-
 
                     const baris =
                         document.createElement(
@@ -1975,7 +1894,6 @@ function muatDashboard() {
 
     .catch(
         function(error) {
-
 
             console.error(
                 "Dashboard error:",
